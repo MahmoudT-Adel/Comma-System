@@ -9,6 +9,6 @@ public class LoginPagesTest extends TestBase{
     @Test(description = "Verify that a user can successfully log in with valid credentials")
     public void userCanLoginSuccessfully(){
         loginPageObj = new LoginPage(driver);
-         loginPageObj.UserCanLogin("40004000400022" , "Comma@123");
+         loginPageObj.UserCanLogin("4000*********" , "*********");
     }
 }
