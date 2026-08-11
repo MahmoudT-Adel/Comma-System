@@ -21,7 +21,7 @@ WebDriver driver;
     driver.manage().window().maximize();
 
     JavascriptExecutor js = (JavascriptExecutor) driver;
-    js.executeScript("document.body.style.zoom='60%'");
+    js.executeScript("document.body.style.zoom='80%'");
     driver.navigate().to("https://comma-co-working-space.up.railway.app/login");
 }
 

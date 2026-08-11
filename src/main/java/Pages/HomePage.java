@@ -18,6 +18,15 @@ public class HomePage extends  PageBase{
     WebElement RoomsPage;
     @FindBy(xpath = "//*[@id=\"app\"]/div/div[1]/ul/li[8]")
     WebElement CheckInPageBtn;
+//    @FindBy(xpath = "//li[contains(text(),'Kitchen Items')]")
+//    WebElement KitchenPage;
+//    @FindBy(xpath = "//li[contains(text(),'Kitchen Sales')]")
+//    WebElement KitchenSalesPage;
+    @FindBy(xpath = "//li[contains(text(),'Shared-Area')]")
+    WebElement Shared_Area_Page;
+    @FindBy(xpath = "//li[contains(., 'Room Bookings')]")
+    WebElement roomBookingsTab;
+
     public void OpenCustomerPage(){
         ClickButton(customerPage);
     }
@@ -30,4 +39,6 @@ public class HomePage extends  PageBase{
         ClickButton(RoomsPage);
     }
     public void OpenCheckInPage() {ClickButton(CheckInPageBtn);}
+ public void OpenShared_Area_Page(){ClickButton(Shared_Area_Page);}
+ public void OpenRoom_Booking_Page(){ClickButton(roomBookingsTab);}
 }

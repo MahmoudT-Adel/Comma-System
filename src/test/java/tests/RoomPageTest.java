@@ -26,26 +26,26 @@ public class RoomPageTest extends TestBase{
         homePageObj.OpenRoomsPage();
     }
 
-//@Test(dependsOnMethods = "OpenRoomPage")
-//    public void AddRoom()  {
-//       roomPageObj = new RoomPage(driver);
-//       roomPageObj.AddNewRoom(
-//               roomName ,
-//               branchName ,
-//               roomType ,
-//               Integer.parseInt( roomCapacity),
-//               Integer.parseInt(roomPrice) );
-//}
-
-//@Test(dependsOnMethods = "OpenRoomPage")
-//    public void EditTheRoom() throws InterruptedException{
-//        roomPageObj = new RoomPage(driver);
-//        Thread.sleep(9000);
-//        roomPageObj.EditTheRoom();
-//
-//}
+@Test(dependsOnMethods = "OpenRoomPage")
+    public void AddRoom()  {
+       roomPageObj = new RoomPage(driver);
+       roomPageObj.AddNewRoom(
+               roomName ,
+               branchName ,
+               roomType ,
+               Integer.parseInt( roomCapacity),
+               Integer.parseInt(roomPrice) );
+}
 
 @Test(dependsOnMethods = "OpenRoomPage")
+    public void EditTheRoom() throws InterruptedException{
+        roomPageObj = new RoomPage(driver);
+        Thread.sleep(9000);
+        roomPageObj.EditTheRoom();
+
+}
+
+@Test(dependsOnMethods = "EditTheRoom")
 public void Delete() throws InterruptedException
 {
         roomPageObj = new RoomPage(driver);
